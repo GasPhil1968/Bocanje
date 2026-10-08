@@ -1,0 +1,1366 @@
+{
+ "fighters": {
+  "bajo": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/bajo/block.webp",
+    "w": 281
+   },
+   "crouch": {
+    "h": 318,
+    "ox": -134,
+    "oy": -316,
+    "src": "fighters/bajo/crouch.webp",
+    "w": 243
+   },
+   "down": {
+    "h": 287,
+    "ox": -101,
+    "oy": -283,
+    "src": "fighters/bajo/down.webp",
+    "w": 296
+   },
+   "hurt": {
+    "h": 346,
+    "ox": -166,
+    "oy": -344,
+    "src": "fighters/bajo/hurt.webp",
+    "w": 361
+   },
+   "idle": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/bajo/idle.webp",
+    "w": 212
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -113,
+    "oy": -462,
+    "src": "fighters/bajo/idle_2.webp",
+    "w": 234
+   },
+   "jump": {
+    "h": 352,
+    "ox": -115,
+    "oy": -421,
+    "src": "fighters/bajo/jump.webp",
+    "w": 294
+   },
+   "kick_mid_strike": {
+    "h": 453,
+    "ox": -182,
+    "oy": -451,
+    "src": "fighters/bajo/kick_mid_strike.webp",
+    "w": 390
+   },
+   "ko": {
+    "h": 181,
+    "ox": -250,
+    "oy": -180,
+    "src": "fighters/bajo/ko.webp",
+    "w": 495
+   },
+   "punch_mid_strike": {
+    "h": 421,
+    "ox": -182,
+    "oy": -420,
+    "src": "fighters/bajo/punch_mid_strike.webp",
+    "w": 426
+   },
+   "punch_mid_windup": {
+    "h": 421,
+    "ox": -158,
+    "oy": -421,
+    "src": "fighters/bajo/punch_mid_windup.webp",
+    "w": 337
+   },
+   "toss_release": {
+    "h": 409,
+    "ox": -208,
+    "oy": -408,
+    "src": "fighters/bajo/toss_release.webp",
+    "w": 433
+   },
+   "toss_windup": {
+    "h": 380,
+    "ox": -99,
+    "oy": -375,
+    "src": "fighters/bajo/toss_windup.webp",
+    "w": 209
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/bajo/walk_1.webp",
+    "w": 250
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/bajo/walk_2.webp",
+    "w": 325
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/bajo/walk_3.webp",
+    "w": 292
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/bajo/walk_4.webp",
+    "w": 312
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/bajo/win.webp",
+    "w": 330
+   }
+  },
+  "ciro": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/ciro/block.webp",
+    "w": 281
+   },
+   "crouch": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/ciro/crouch.webp",
+    "w": 258
+   },
+   "down": {
+    "h": 277,
+    "ox": -101,
+    "oy": -273,
+    "src": "fighters/ciro/down.webp",
+    "w": 296
+   },
+   "hurt": {
+    "h": 344,
+    "ox": -166,
+    "oy": -342,
+    "src": "fighters/ciro/hurt.webp",
+    "w": 361
+   },
+   "idle": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/ciro/idle.webp",
+    "w": 239
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -113,
+    "oy": -462,
+    "src": "fighters/ciro/idle_2.webp",
+    "w": 252
+   },
+   "jump": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/ciro/jump.webp",
+    "w": 294
+   },
+   "ko": {
+    "h": 160,
+    "ox": -250,
+    "oy": -159,
+    "src": "fighters/ciro/ko.webp",
+    "w": 495
+   },
+   "nun_high_strike": {
+    "h": 459,
+    "ox": -188,
+    "oy": -458,
+    "src": "fighters/ciro/nun_high_strike.webp",
+    "w": 506
+   },
+   "nun_low_strike": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/ciro/nun_low_strike.webp",
+    "w": 254
+   },
+   "nun_mid_strike": {
+    "h": 421,
+    "ox": -182,
+    "oy": -420,
+    "src": "fighters/ciro/nun_mid_strike.webp",
+    "w": 480
+   },
+   "nun_spin": {
+    "h": 417,
+    "ox": -130,
+    "oy": -416,
+    "src": "fighters/ciro/nun_spin.webp",
+    "w": 302
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/ciro/walk_1.webp",
+    "w": 263
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/ciro/walk_2.webp",
+    "w": 325
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/ciro/walk_3.webp",
+    "w": 292
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/ciro/walk_4.webp",
+    "w": 312
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/ciro/win.webp",
+    "w": 330
+   }
+  },
+  "ero": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/ero/block.webp",
+    "w": 281
+   },
+   "crouch": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/ero/crouch.webp",
+    "w": 243
+   },
+   "dive_kick": {
+    "h": 294,
+    "ox": -167,
+    "oy": -387,
+    "src": "fighters/ero/dive_kick.webp",
+    "w": 324
+   },
+   "down": {
+    "h": 277,
+    "ox": -101,
+    "oy": -273,
+    "src": "fighters/ero/down.webp",
+    "w": 296
+   },
+   "hurt": {
+    "h": 344,
+    "ox": -166,
+    "oy": -342,
+    "src": "fighters/ero/hurt.webp",
+    "w": 361
+   },
+   "idle": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/ero/idle.webp",
+    "w": 212
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -113,
+    "oy": -462,
+    "src": "fighters/ero/idle_2.webp",
+    "w": 234
+   },
+   "jump": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/ero/jump.webp",
+    "w": 294
+   },
+   "jump_apex": {
+    "h": 344,
+    "ox": -161,
+    "oy": -437,
+    "src": "fighters/ero/jump_apex.webp",
+    "w": 405
+   },
+   "jump_fall": {
+    "h": 294,
+    "ox": -167,
+    "oy": -362,
+    "src": "fighters/ero/jump_fall.webp",
+    "w": 324
+   },
+   "jump_rise": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/ero/jump_rise.webp",
+    "w": 294
+   },
+   "kick_high_strike": {
+    "h": 459,
+    "ox": -188,
+    "oy": -458,
+    "src": "fighters/ero/kick_high_strike.webp",
+    "w": 473
+   },
+   "kick_high_windup": {
+    "h": 464,
+    "ox": -144,
+    "oy": -463,
+    "src": "fighters/ero/kick_high_windup.webp",
+    "w": 326
+   },
+   "ko": {
+    "h": 160,
+    "ox": -250,
+    "oy": -159,
+    "src": "fighters/ero/ko.webp",
+    "w": 495
+   },
+   "land": {
+    "h": 315,
+    "ox": -141,
+    "oy": -314,
+    "src": "fighters/ero/land.webp",
+    "w": 284
+   },
+   "sweep_strike": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/ero/sweep_strike.webp",
+    "w": 243
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/ero/walk_1.webp",
+    "w": 250
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/ero/walk_2.webp",
+    "w": 325
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/ero/walk_3.webp",
+    "w": 292
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/ero/walk_4.webp",
+    "w": 312
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/ero/win.webp",
+    "w": 330
+   }
+  },
+  "levat": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/levat/block.webp",
+    "w": 281
+   },
+   "crouch": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/levat/crouch.webp",
+    "w": 243
+   },
+   "down": {
+    "h": 277,
+    "ox": -101,
+    "oy": -273,
+    "src": "fighters/levat/down.webp",
+    "w": 296
+   },
+   "hurt": {
+    "h": 344,
+    "ox": -166,
+    "oy": -342,
+    "src": "fighters/levat/hurt.webp",
+    "w": 361
+   },
+   "idle": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/levat/idle.webp",
+    "w": 212
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -113,
+    "oy": -462,
+    "src": "fighters/levat/idle_2.webp",
+    "w": 234
+   },
+   "jump": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/levat/jump.webp",
+    "w": 294
+   },
+   "ko": {
+    "h": 160,
+    "ox": -250,
+    "oy": -159,
+    "src": "fighters/levat/ko.webp",
+    "w": 495
+   },
+   "sit": {
+    "h": 236,
+    "ox": -124,
+    "oy": -234,
+    "src": "fighters/levat/sit.webp",
+    "w": 317
+   },
+   "slow_kick_strike": {
+    "h": 453,
+    "ox": -182,
+    "oy": -451,
+    "src": "fighters/levat/slow_kick_strike.webp",
+    "w": 390
+   },
+   "slow_kick_windup": {
+    "h": 464,
+    "ox": -144,
+    "oy": -463,
+    "src": "fighters/levat/slow_kick_windup.webp",
+    "w": 326
+   },
+   "slow_punch_strike": {
+    "h": 421,
+    "ox": -182,
+    "oy": -420,
+    "src": "fighters/levat/slow_punch_strike.webp",
+    "w": 426
+   },
+   "slow_punch_windup": {
+    "h": 421,
+    "ox": -158,
+    "oy": -421,
+    "src": "fighters/levat/slow_punch_windup.webp",
+    "w": 337
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/levat/walk_1.webp",
+    "w": 250
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/levat/walk_2.webp",
+    "w": 325
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/levat/walk_3.webp",
+    "w": 292
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/levat/walk_4.webp",
+    "w": 312
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/levat/win.webp",
+    "w": 330
+   }
+  },
+  "mrkonja": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/mrkonja/block.webp",
+    "w": 281
+   },
+   "crouch": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/mrkonja/crouch.webp",
+    "w": 249
+   },
+   "dive_kick": {
+    "h": 294,
+    "ox": -167,
+    "oy": -387,
+    "src": "fighters/mrkonja/dive_kick.webp",
+    "w": 324
+   },
+   "down": {
+    "h": 277,
+    "ox": -101,
+    "oy": -273,
+    "src": "fighters/mrkonja/down.webp",
+    "w": 296
+   },
+   "hurt": {
+    "h": 344,
+    "ox": -166,
+    "oy": -342,
+    "src": "fighters/mrkonja/hurt.webp",
+    "w": 361
+   },
+   "idle": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/mrkonja/idle.webp",
+    "w": 230
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -113,
+    "oy": -462,
+    "src": "fighters/mrkonja/idle_2.webp",
+    "w": 244
+   },
+   "jump": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/mrkonja/jump.webp",
+    "w": 294
+   },
+   "kick_high_strike": {
+    "h": 459,
+    "ox": -188,
+    "oy": -458,
+    "src": "fighters/mrkonja/kick_high_strike.webp",
+    "w": 498
+   },
+   "ko": {
+    "h": 162,
+    "ox": -250,
+    "oy": -161,
+    "src": "fighters/mrkonja/ko.webp",
+    "w": 495
+   },
+   "rage": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/mrkonja/rage.webp",
+    "w": 230
+   },
+   "slash_high_strike": {
+    "h": 421,
+    "ox": -182,
+    "oy": -420,
+    "src": "fighters/mrkonja/slash_high_strike.webp",
+    "w": 459
+   },
+   "slash_high_windup": {
+    "h": 421,
+    "ox": -158,
+    "oy": -421,
+    "src": "fighters/mrkonja/slash_high_windup.webp",
+    "w": 351
+   },
+   "slash_low_strike": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/mrkonja/slash_low_strike.webp",
+    "w": 275
+   },
+   "toss_release": {
+    "h": 409,
+    "ox": -208,
+    "oy": -408,
+    "src": "fighters/mrkonja/toss_release.webp",
+    "w": 433
+   },
+   "toss_windup": {
+    "h": 380,
+    "ox": -99,
+    "oy": -375,
+    "src": "fighters/mrkonja/toss_windup.webp",
+    "w": 209
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/mrkonja/walk_1.webp",
+    "w": 254
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/mrkonja/walk_2.webp",
+    "w": 325
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/mrkonja/walk_3.webp",
+    "w": 292
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/mrkonja/walk_4.webp",
+    "w": 312
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/mrkonja/win.webp",
+    "w": 330
+   }
+  },
+  "mujo": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/mujo/block.webp",
+    "w": 446
+   },
+   "crouch": {
+    "h": 312,
+    "ox": -135,
+    "oy": -310,
+    "src": "fighters/mujo/crouch.webp",
+    "w": 423
+   },
+   "down": {
+    "h": 277,
+    "ox": -101,
+    "oy": -273,
+    "src": "fighters/mujo/down.webp",
+    "w": 454
+   },
+   "hurt": {
+    "h": 344,
+    "ox": -166,
+    "oy": -342,
+    "src": "fighters/mujo/hurt.webp",
+    "w": 496
+   },
+   "idle": {
+    "h": 462,
+    "ox": -122,
+    "oy": -460,
+    "src": "fighters/mujo/idle.webp",
+    "w": 423
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -119,
+    "oy": -462,
+    "src": "fighters/mujo/idle_2.webp",
+    "w": 423
+   },
+   "jump": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/mujo/jump.webp",
+    "w": 454
+   },
+   "kick_mid_strike": {
+    "h": 453,
+    "ox": -182,
+    "oy": -451,
+    "src": "fighters/mujo/kick_mid_strike.webp",
+    "w": 615
+   },
+   "ko": {
+    "h": 165,
+    "ox": -250,
+    "oy": -164,
+    "src": "fighters/mujo/ko.webp",
+    "w": 578
+   },
+   "pole_high_strike": {
+    "h": 421,
+    "ox": -182,
+    "oy": -420,
+    "src": "fighters/mujo/pole_high_strike.webp",
+    "w": 608
+   },
+   "pole_low_strike": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/mujo/pole_low_strike.webp",
+    "w": 426
+   },
+   "pole_mid_strike": {
+    "h": 419,
+    "ox": -185,
+    "oy": -417,
+    "src": "fighters/mujo/pole_mid_strike.webp",
+    "w": 675
+   },
+   "pole_windup": {
+    "h": 421,
+    "ox": -158,
+    "oy": -421,
+    "src": "fighters/mujo/pole_windup.webp",
+    "w": 337
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/mujo/walk_1.webp",
+    "w": 427
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/mujo/walk_2.webp",
+    "w": 473
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/mujo/walk_3.webp",
+    "w": 453
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/mujo/walk_4.webp",
+    "w": 464
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/mujo/win.webp",
+    "w": 476
+   }
+  },
+  "saner": {
+   "block": {
+    "h": 460,
+    "ox": -208,
+    "oy": -458,
+    "src": "fighters/saner/block.webp",
+    "w": 411
+   },
+   "crouch": {
+    "h": 363,
+    "ox": -134,
+    "oy": -362,
+    "src": "fighters/saner/crouch.webp",
+    "w": 322
+   },
+   "down": {
+    "h": 204,
+    "ox": -198,
+    "oy": -203,
+    "src": "fighters/saner/down.webp",
+    "w": 462
+   },
+   "hurt": {
+    "h": 346,
+    "ox": -165,
+    "oy": -345,
+    "src": "fighters/saner/hurt.webp",
+    "w": 355
+   },
+   "idle": {
+    "h": 463,
+    "ox": -141,
+    "oy": -461,
+    "src": "fighters/saner/idle.webp",
+    "w": 291
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -139,
+    "oy": -458,
+    "src": "fighters/saner/idle_2.webp",
+    "w": 288
+   },
+   "jump": {
+    "h": 370,
+    "ox": -100,
+    "oy": -438,
+    "src": "fighters/saner/jump.webp",
+    "w": 308
+   },
+   "jump_apex": {
+    "h": 392,
+    "ox": -199,
+    "oy": -485,
+    "src": "fighters/saner/jump_apex.webp",
+    "w": 344
+   },
+   "jump_fall": {
+    "h": 421,
+    "ox": -144,
+    "oy": -490,
+    "src": "fighters/saner/jump_fall.webp",
+    "w": 250
+   },
+   "jump_kick": {
+    "h": 446,
+    "ox": -198,
+    "oy": -540,
+    "src": "fighters/saner/jump_kick.webp",
+    "w": 493
+   },
+   "jump_rise": {
+    "h": 370,
+    "ox": -100,
+    "oy": -438,
+    "src": "fighters/saner/jump_rise.webp",
+    "w": 308
+   },
+   "kick_high_recover": {
+    "h": 476,
+    "ox": -164,
+    "oy": -474,
+    "src": "fighters/saner/kick_high_recover.webp",
+    "w": 341
+   },
+   "kick_high_strike": {
+    "h": 446,
+    "ox": -198,
+    "oy": -445,
+    "src": "fighters/saner/kick_high_strike.webp",
+    "w": 493
+   },
+   "kick_high_windup": {
+    "h": 352,
+    "ox": -197,
+    "oy": -350,
+    "src": "fighters/saner/kick_high_windup.webp",
+    "w": 455
+   },
+   "kick_mid_recover": {
+    "h": 476,
+    "ox": -164,
+    "oy": -474,
+    "src": "fighters/saner/kick_mid_recover.webp",
+    "w": 341
+   },
+   "kick_mid_strike": {
+    "h": 352,
+    "ox": -197,
+    "oy": -350,
+    "src": "fighters/saner/kick_mid_strike.webp",
+    "w": 455
+   },
+   "kick_mid_windup": {
+    "h": 478,
+    "ox": -139,
+    "oy": -476,
+    "src": "fighters/saner/kick_mid_windup.webp",
+    "w": 377
+   },
+   "ko": {
+    "h": 137,
+    "ox": -237,
+    "oy": -135,
+    "src": "fighters/saner/ko.webp",
+    "w": 525
+   },
+   "land": {
+    "h": 299,
+    "ox": -117,
+    "oy": -297,
+    "src": "fighters/saner/land.webp",
+    "w": 232
+   },
+   "punch_high_recover": {
+    "h": 461,
+    "ox": -243,
+    "oy": -459,
+    "src": "fighters/saner/punch_high_recover.webp",
+    "w": 496
+   },
+   "punch_high_strike": {
+    "h": 467,
+    "ox": -206,
+    "oy": -465,
+    "src": "fighters/saner/punch_high_strike.webp",
+    "w": 507
+   },
+   "punch_high_windup": {
+    "h": 470,
+    "ox": -150,
+    "oy": -470,
+    "src": "fighters/saner/punch_high_windup.webp",
+    "w": 378
+   },
+   "punch_low_recover": {
+    "h": 315,
+    "ox": -137,
+    "oy": -313,
+    "src": "fighters/saner/punch_low_recover.webp",
+    "w": 320
+   },
+   "punch_low_strike": {
+    "h": 264,
+    "ox": -155,
+    "oy": -262,
+    "src": "fighters/saner/punch_low_strike.webp",
+    "w": 441
+   },
+   "punch_low_windup": {
+    "h": 355,
+    "ox": -128,
+    "oy": -353,
+    "src": "fighters/saner/punch_low_windup.webp",
+    "w": 287
+   },
+   "punch_mid_recover": {
+    "h": 464,
+    "ox": -212,
+    "oy": -463,
+    "src": "fighters/saner/punch_mid_recover.webp",
+    "w": 362
+   },
+   "punch_mid_strike": {
+    "h": 469,
+    "ox": -127,
+    "oy": -467,
+    "src": "fighters/saner/punch_mid_strike.webp",
+    "w": 376
+   },
+   "punch_mid_windup": {
+    "h": 460,
+    "ox": -208,
+    "oy": -458,
+    "src": "fighters/saner/punch_mid_windup.webp",
+    "w": 411
+   },
+   "run_1": {
+    "h": 420,
+    "ox": -214,
+    "oy": -418,
+    "src": "fighters/saner/run_1.webp",
+    "w": 427
+   },
+   "run_2": {
+    "h": 426,
+    "ox": -258,
+    "oy": -424,
+    "src": "fighters/saner/run_2.webp",
+    "w": 478
+   },
+   "run_3": {
+    "h": 422,
+    "ox": -256,
+    "oy": -420,
+    "src": "fighters/saner/run_3.webp",
+    "w": 478
+   },
+   "run_4": {
+    "h": 436,
+    "ox": -238,
+    "oy": -436,
+    "src": "fighters/saner/run_4.webp",
+    "w": 434
+   },
+   "sweep_recover": {
+    "h": 282,
+    "ox": -189,
+    "oy": -281,
+    "src": "fighters/saner/sweep_recover.webp",
+    "w": 395
+   },
+   "sweep_strike": {
+    "h": 264,
+    "ox": -155,
+    "oy": -262,
+    "src": "fighters/saner/sweep_strike.webp",
+    "w": 441
+   },
+   "sweep_windup": {
+    "h": 311,
+    "ox": -160,
+    "oy": -310,
+    "src": "fighters/saner/sweep_windup.webp",
+    "w": 344
+   },
+   "walk_1": {
+    "h": 462,
+    "ox": -143,
+    "oy": -460,
+    "src": "fighters/saner/walk_1.webp",
+    "w": 247
+   },
+   "walk_2": {
+    "h": 464,
+    "ox": -141,
+    "oy": -462,
+    "src": "fighters/saner/walk_2.webp",
+    "w": 276
+   },
+   "walk_3": {
+    "h": 464,
+    "ox": -110,
+    "oy": -462,
+    "src": "fighters/saner/walk_3.webp",
+    "w": 270
+   },
+   "walk_4": {
+    "h": 463,
+    "ox": -162,
+    "oy": -461,
+    "src": "fighters/saner/walk_4.webp",
+    "w": 323
+   },
+   "win": {
+    "h": 381,
+    "ox": -152,
+    "oy": -380,
+    "src": "fighters/saner/win.webp",
+    "w": 301
+   }
+  },
+  "zumbul": {
+   "block": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/zumbul/block.webp",
+    "w": 281
+   },
+   "chain_rest": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/zumbul/chain_rest.webp",
+    "w": 212
+   },
+   "crouch": {
+    "h": 312,
+    "ox": -134,
+    "oy": -310,
+    "src": "fighters/zumbul/crouch.webp",
+    "w": 243
+   },
+   "down": {
+    "h": 277,
+    "ox": -101,
+    "oy": -273,
+    "src": "fighters/zumbul/down.webp",
+    "w": 296
+   },
+   "hurt": {
+    "h": 344,
+    "ox": -166,
+    "oy": -342,
+    "src": "fighters/zumbul/hurt.webp",
+    "w": 361
+   },
+   "idle": {
+    "h": 462,
+    "ox": -102,
+    "oy": -460,
+    "src": "fighters/zumbul/idle.webp",
+    "w": 212
+   },
+   "idle_2": {
+    "h": 463,
+    "ox": -113,
+    "oy": -462,
+    "src": "fighters/zumbul/idle_2.webp",
+    "w": 234
+   },
+   "jump": {
+    "h": 350,
+    "ox": -115,
+    "oy": -419,
+    "src": "fighters/zumbul/jump.webp",
+    "w": 294
+   },
+   "kick_mid_strike": {
+    "h": 453,
+    "ox": -182,
+    "oy": -451,
+    "src": "fighters/zumbul/kick_mid_strike.webp",
+    "w": 395
+   },
+   "ko": {
+    "h": 161,
+    "ox": -250,
+    "oy": -160,
+    "src": "fighters/zumbul/ko.webp",
+    "w": 495
+   },
+   "punch_mid_strike": {
+    "h": 421,
+    "ox": -182,
+    "oy": -420,
+    "src": "fighters/zumbul/punch_mid_strike.webp",
+    "w": 426
+   },
+   "swing_1": {
+    "h": 404,
+    "ox": -119,
+    "oy": -403,
+    "src": "fighters/zumbul/swing_1.webp",
+    "w": 281
+   },
+   "swing_2": {
+    "h": 405,
+    "ox": -145,
+    "oy": -404,
+    "src": "fighters/zumbul/swing_2.webp",
+    "w": 316
+   },
+   "swing_3": {
+    "h": 417,
+    "ox": -130,
+    "oy": -416,
+    "src": "fighters/zumbul/swing_3.webp",
+    "w": 302
+   },
+   "walk_1": {
+    "h": 457,
+    "ox": -120,
+    "oy": -455,
+    "src": "fighters/zumbul/walk_1.webp",
+    "w": 250
+   },
+   "walk_2": {
+    "h": 453,
+    "ox": -152,
+    "oy": -451,
+    "src": "fighters/zumbul/walk_2.webp",
+    "w": 325
+   },
+   "walk_3": {
+    "h": 455,
+    "ox": -131,
+    "oy": -454,
+    "src": "fighters/zumbul/walk_3.webp",
+    "w": 292
+   },
+   "walk_4": {
+    "h": 445,
+    "ox": -166,
+    "oy": -443,
+    "src": "fighters/zumbul/walk_4.webp",
+    "w": 312
+   },
+   "win": {
+    "h": 457,
+    "ox": -135,
+    "oy": -455,
+    "src": "fighters/zumbul/win.webp",
+    "w": 330
+   },
+   "wind": {
+    "h": 421,
+    "ox": -158,
+    "oy": -421,
+    "src": "fighters/zumbul/wind.webp",
+    "w": 337
+   }
+  }
+ },
+ "images": {
+  "bg/bg_0": "backgrounds/bg_0.webp",
+  "bg/bg_1": "backgrounds/bg_1.webp",
+  "bg/bg_2": "backgrounds/bg_2.webp",
+  "bg/bg_3": "backgrounds/bg_3.webp",
+  "bg/bg_4": "backgrounds/bg_4.webp",
+  "bg/bg_5": "backgrounds/bg_5.webp",
+  "bg/bg_6": "backgrounds/bg_6.webp",
+  "buttons/btn_kick_highlighted": "ui/buttons/btn_kick_highlighted.png",
+  "buttons/btn_kick_normal": "ui/buttons/btn_kick_normal.png",
+  "buttons/btn_kick_pressed": "ui/buttons/btn_kick_pressed.png",
+  "buttons/btn_punch_highlighted": "ui/buttons/btn_punch_highlighted.png",
+  "buttons/btn_punch_normal": "ui/buttons/btn_punch_normal.png",
+  "buttons/btn_punch_pressed": "ui/buttons/btn_punch_pressed.png",
+  "buttons/joy_base_highlighted": "ui/buttons/joy_base_highlighted.webp",
+  "buttons/joy_base_normal": "ui/buttons/joy_base_normal.webp",
+  "buttons/joy_knob_normal": "ui/buttons/joy_knob_normal.png",
+  "buttons/joy_knob_pressed": "ui/buttons/joy_knob_pressed.png",
+  "buttons/lang_chip_highlighted": "ui/buttons/lang_chip_highlighted.png",
+  "buttons/lang_chip_normal": "ui/buttons/lang_chip_normal.png",
+  "buttons/lang_chip_pressed": "ui/buttons/lang_chip_pressed.png",
+  "buttons/sound_chip_highlighted": "ui/buttons/sound_chip_highlighted.png",
+  "buttons/sound_chip_normal": "ui/buttons/sound_chip_normal.png",
+  "buttons/sound_chip_pressed": "ui/buttons/sound_chip_pressed.png",
+  "fx/comic_burst_1_gold": "fx/comic_burst_1_gold.png",
+  "fx/comic_burst_1_salmon": "fx/comic_burst_1_salmon.png",
+  "fx/comic_burst_2_gold": "fx/comic_burst_2_gold.png",
+  "fx/comic_burst_2_salmon": "fx/comic_burst_2_salmon.png",
+  "fx/dust_puff_1": "fx/dust_puff_1.png",
+  "fx/dust_puff_2": "fx/dust_puff_2.png",
+  "fx/dust_puff_3": "fx/dust_puff_3.png",
+  "fx/hit_spark_gold_1": "fx/hit_spark_gold_1.png",
+  "fx/hit_spark_gold_2": "fx/hit_spark_gold_2.png",
+  "fx/hit_spark_gold_3": "fx/hit_spark_gold_3.png",
+  "fx/hit_spark_gold_4": "fx/hit_spark_gold_4.png",
+  "fx/hit_spark_salmon_1": "fx/hit_spark_salmon_1.png",
+  "fx/hit_spark_salmon_2": "fx/hit_spark_salmon_2.png",
+  "fx/hit_spark_salmon_3": "fx/hit_spark_salmon_3.png",
+  "fx/hit_spark_salmon_4": "fx/hit_spark_salmon_4.png",
+  "fx/impact_ring_gold_1": "fx/impact_ring_gold_1.png",
+  "fx/impact_ring_gold_2": "fx/impact_ring_gold_2.png",
+  "fx/impact_ring_gold_3": "fx/impact_ring_gold_3.png",
+  "fx/impact_ring_gold_4": "fx/impact_ring_gold_4.png",
+  "fx/impact_ring_salmon_1": "fx/impact_ring_salmon_1.png",
+  "fx/impact_ring_salmon_2": "fx/impact_ring_salmon_2.png",
+  "fx/impact_ring_salmon_3": "fx/impact_ring_salmon_3.png",
+  "fx/impact_ring_salmon_4": "fx/impact_ring_salmon_4.png",
+  "fx/shadow": "fx/shadow.png",
+  "fx/spark_cloth_1": "fx/spark_cloth_1.png",
+  "fx/spark_cloth_2": "fx/spark_cloth_2.png",
+  "fx/spark_cloth_3": "fx/spark_cloth_3.png",
+  "fx/spark_steel_1": "fx/spark_steel_1.png",
+  "fx/spark_steel_2": "fx/spark_steel_2.png",
+  "fx/spark_steel_3": "fx/spark_steel_3.png",
+  "fx/spark_wood_1": "fx/spark_wood_1.png",
+  "fx/spark_wood_2": "fx/spark_wood_2.png",
+  "fx/spark_wood_3": "fx/spark_wood_3.png",
+  "hud/boss_phase_marker_bright": "ui/hud/boss_phase_marker_bright.png",
+  "hud/boss_phase_marker_dim": "ui/hud/boss_phase_marker_dim.png",
+  "hud/hud_bar_foe": "ui/hud/hud_bar_foe.png",
+  "hud/hud_bar_player": "ui/hud/hud_bar_player.png",
+  "hud/hud_fill_foe": "ui/hud/hud_fill_foe.png",
+  "hud/hud_fill_player": "ui/hud/hud_fill_player.png",
+  "hud/hud_panel": "ui/hud/hud_panel.webp",
+  "hud/portrait_bajo": "ui/hud/portrait_bajo.png",
+  "hud/portrait_ciro": "ui/hud/portrait_ciro.png",
+  "hud/portrait_ero": "ui/hud/portrait_ero.png",
+  "hud/portrait_frame": "ui/hud/portrait_frame.png",
+  "hud/portrait_frame_boss": "ui/hud/portrait_frame_boss.png",
+  "hud/portrait_levat": "ui/hud/portrait_levat.png",
+  "hud/portrait_mrkonja": "ui/hud/portrait_mrkonja.png",
+  "hud/portrait_mujo": "ui/hud/portrait_mujo.png",
+  "hud/portrait_saner": "ui/hud/portrait_saner.png",
+  "hud/portrait_zumbul": "ui/hud/portrait_zumbul.png",
+  "hud/timer_plate": "ui/hud/timer_plate.png",
+  "icons/icon_fist": "ui/icons/icon_fist.png",
+  "icons/icon_foot": "ui/icons/icon_foot.png",
+  "icons/icon_rotate_phone": "ui/icons/icon_rotate_phone.png",
+  "icons/icon_sound_off": "ui/icons/icon_sound_off.png",
+  "icons/icon_sound_on": "ui/icons/icon_sound_on.png",
+  "overlays/banner_brass_1": "overlays/banner_brass_1.png",
+  "overlays/banner_brass_2": "overlays/banner_brass_2.png",
+  "overlays/banner_brass_3": "overlays/banner_brass_3.png",
+  "overlays/banner_oxblood_1": "overlays/banner_oxblood_1.png",
+  "overlays/banner_oxblood_2": "overlays/banner_oxblood_2.png",
+  "overlays/banner_oxblood_3": "overlays/banner_oxblood_3.png",
+  "overlays/cat_1": "overlays/cat_1.png",
+  "overlays/cat_2": "overlays/cat_2.png",
+  "overlays/cat_3": "overlays/cat_3.png",
+  "overlays/cat_4": "overlays/cat_4.png",
+  "overlays/crowd_row_1": "overlays/crowd_row_1.png",
+  "overlays/crowd_row_2": "overlays/crowd_row_2.png",
+  "overlays/falling_plum": "overlays/falling_plum.png",
+  "overlays/firefly_1": "overlays/firefly_1.png",
+  "overlays/firefly_2": "overlays/firefly_2.png",
+  "overlays/gull_1": "overlays/gull_1.png",
+  "overlays/gull_2": "overlays/gull_2.png",
+  "overlays/leaf_1": "overlays/leaf_1.png",
+  "overlays/leaf_2": "overlays/leaf_2.png",
+  "overlays/leaf_3": "overlays/leaf_3.png",
+  "overlays/mist_bank": "overlays/mist_bank.png",
+  "overlays/pigeon_1": "overlays/pigeon_1.png",
+  "overlays/pigeon_2": "overlays/pigeon_2.png",
+  "overlays/sailboat": "overlays/sailboat.png",
+  "overlays/smoke_wisp_1": "overlays/smoke_wisp_1.png",
+  "overlays/smoke_wisp_2": "overlays/smoke_wisp_2.png",
+  "overlays/smoke_wisp_3": "overlays/smoke_wisp_3.png",
+  "overlays/star_1": "overlays/star_1.png",
+  "overlays/star_2": "overlays/star_2.png",
+  "overlays/torch_flame_1": "overlays/torch_flame_1.png",
+  "overlays/torch_flame_2": "overlays/torch_flame_2.png",
+  "overlays/torch_flame_3": "overlays/torch_flame_3.png",
+  "overlays/torch_flame_4": "overlays/torch_flame_4.png",
+  "overlays/torch_glow": "overlays/torch_glow.png",
+  "overlays/water_glint_1": "overlays/water_glint_1.png",
+  "overlays/water_glint_2": "overlays/water_glint_2.png",
+  "overlays/water_glint_3": "overlays/water_glint_3.png",
+  "props/chain_ball": "props/chain_ball.png",
+  "props/chain_link": "props/chain_link.png",
+  "props/drop_chainball": "props/drop_chainball.png",
+  "props/drop_handzar": "props/drop_handzar.png",
+  "props/drop_motka": "props/drop_motka.png",
+  "props/drop_nunchaku": "props/drop_nunchaku.png",
+  "props/knife_projectile": "props/knife_projectile.png",
+  "props/life_icon": "props/life_icon.png",
+  "props/plum_projectile": "props/plum_projectile.png",
+  "screens/logo_fg": "ui/screens/logo_fg.webp",
+  "screens/logo_title": "ui/screens/logo_title.webp",
+  "screens/node_travel_cleared": "ui/screens/node_travel_cleared.png",
+  "screens/node_travel_current": "ui/screens/node_travel_current.png",
+  "screens/node_travel_upcoming": "ui/screens/node_travel_upcoming.png",
+  "screens/speech_bubble_9slice": "ui/screens/speech_bubble_9slice.png",
+  "screens/speech_tail": "ui/screens/speech_tail.png",
+  "screens/travel_road": "ui/screens/travel_road.png"
+ }
+}
