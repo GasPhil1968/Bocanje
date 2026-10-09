@@ -30,6 +30,8 @@ TRACKS = {
                            trigger='SCENE().name==="Zadar" while playing'),
     'mus_city_pula': dict(use='Flight over Pula', city='Pula', style='Istrian two-part music on the six-tone Istrian scale: sopile and voices, tapan',
                           trigger='SCENE().name==="Pula" while playing'),
+    'mus_city_podaca': dict(use='Flight over Podaca', city='Podaca', style='Evening klapa serenade in 6/8: mandolin and klapa verses over guitar, a distant bell tower',
+                            trigger='SCENE().name==="Podaca" while playing'),
     'mus_fever': dict(use='Fever mode ("GALEB!", 6 s)', city=None, style='Fast bright 2/4: tremolo mandolins in thirds, bass, tapan, def',
                       trigger='feverStart() .. feverKraj()'),
     'mus_end_screen': dict(use='End screen after a crash (score, medal, postcard)', city=None,
@@ -148,7 +150,7 @@ def manifest(q, info, oggs):
                      layer_of=name if kind == 'layer' else None, layer_id=(name + '_layer') if kind == 'base' and info[name]['has_layer'] else None,
                      city=t['city'], use=t['use'], style=t['style'], suggested_game_trigger=t['trigger'],
                      loop=True, loop_start_sample=0, loop_end_sample=r['frames'], duration_seconds=r['duration'],
-                     bpm=s.bpm, meter=f'{s.bpb}/4', bars=s.nbars, key=key_of(s), channels=2,
+                     bpm=s.bpm, meter=getattr(s, 'meter', f'{s.bpb}/4'), bars=s.nbars, key=key_of(s), channels=2,
                      volume_recommendation=0.75 if kind == 'base' else 0.75, loudness_lufs=r['loudness'],
                      peak_dbfs=r['peak_dbfs'], fade_in_s=2.0 if name.startswith('mus_city') else 1.0, fade_out_s=1.5)
             out.append(e)

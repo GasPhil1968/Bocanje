@@ -211,6 +211,36 @@ def mus_city_pula():
     return s
 
 
+# ---------------------------------------------------------------- Podaca: evening klapa serenade in 6/8
+# A small cove under Biokovo: pebble beach, stone houses, a bell tower over the shore.
+# Time unit = eighth note (bpb 6 = one 6/8 bar); the lilt of the 6/8 is the rocking of the boats.
+POD_A = ['B4:3 G4:2 A4:1', 'B4:2 E5:1 D5:2 B4:1', 'C5:3 B4:2 A4:1', 'G4:5 r:1',
+         'A4:2 C5:1 E5:2 D5:1', 'B4:3 G4:2 E4:1', 'F#4:2 A4:1 B4:3', 'A4:2 F#4:1 D#4:3']
+POD_B = ['D5:3 B4:2 D5:1', 'F#5:3 E5:2 D5:1', 'E5:2 D5:1 B4:3', 'D5:5 r:1',
+         'E5:2 G5:1 E5:2 C5:1', 'D5:3 B4:3', 'C5:2 A4:1 B4:2 F#4:1', 'E4:5 r:1']
+
+
+@song
+def mus_city_podaca():
+    ca = ['Em', 'Em', 'C', 'G', 'Am', 'Em', 'B7', 'B7']; cb = ['G', 'D', 'Em', 'Bm', 'C', 'G', 'Am B7', 'Em']
+    ci = ['Em', 'C', 'Am', 'B7']
+    s = Song('mus_city_podaca', 150, 6, ca + cb + ca + ci, 4, HMINOR, trans=-7, seed=101, rt60=1.9, wet=0.24)
+    s.meter = '6/8'
+    A, B = check(POD_A, 6), check(POD_B, 6)
+    s.arpeggio(0, 28, 'B 1 2 0 2 1', inst='guitar', vel=0.5, low=38, pan=-0.3, step=1.0, accent=1.2)
+    s.melody(A, 0, 'mandolin', 0.6, 0.25, oct=1, trem_from=0.75)        # verse 1: the mandolin sings
+    s.klapa(B, 8, 'o', 0.62, oct=0)                                    # refrain: the klapa answers
+    s.klapa(A, 16, 'a', 0.62, oct=0)                                   # verse 2 sung
+    s.pad(0, 8, vowel='u', vel=0.22, low=50)                           # hummed chords under the mandolin
+    s.melody('E5:3 D5:3 C5:3 B4:3 A4:3 C5:3 B4:6', 24, 'mandolin', 0.5, 0.25, oct=1, trem_from=0.75)
+    for bar in (0, 8, 16, 24):                                         # the bell tower over the cove
+        s.add('church_bell', bar * 6, 12, 64, 0.32, 0.45, 'base')   # E4 written = A3 sounding: a small campanile
+    # layer: rocking mandolin arpeggio + a soft frame drum on the two dotted beats
+    s.arpeggio(0, 28, '0 1 2 1 2 1', inst='mandolin', vel=0.34, part='layer', low=62, pan=0.45, step=1.0)
+    s.drums(0, 28, {'def_drum': [(0, 0.24), (3, 0.18)], 'shaker': [(1, 0.08), (2, 0.1), (4, 0.08), (5, 0.1)]}, part='layer')
+    return s
+
+
 # ---------------------------------------------------------------- Fever: fast, bright, 2/4
 FEV_A = ['A4:0.5 D5:0.5 F#5:0.5 D5:0.5', 'A5:1 F#5:1', 'G5:0.5 E5:0.5 C#5:0.5 E5:0.5', 'A5:2',
          'B5:0.5 A5:0.5 G5:0.5 F#5:0.5', 'E5:0.5 F#5:0.5 G5:0.5 E5:0.5', 'D5:0.5 F#5:0.5 E5:0.5 C#5:0.5', 'D5:2']

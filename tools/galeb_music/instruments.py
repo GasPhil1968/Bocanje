@@ -167,6 +167,13 @@ def shaker(f=None, dur=0.1, r=None, vel=0.4, **kw):
     return lp(bp(noise(n, r), 2500, 7000) * e, 6500) * vel
 
 
-INST = dict(voice=choir_voice, solo_voice=voice, mandolin=mandolin, mandolin_trem=mandolin_trem, guitar=guitar,
+def church_bell(f=None, dur=3.0, r=None, vel=0.4, **kw):
+    """a distant village church bell (minor-third tierce, air-damped)."""
+    from lib import bell
+    y = bell(f, max(2.5, dur), r, bright=0.55, warm=1.1, strike=0.12)
+    return lp(y, 2400, 2) * vel
+
+
+INST = dict(church_bell=church_bell, voice=choir_voice, solo_voice=voice, mandolin=mandolin, mandolin_trem=mandolin_trem, guitar=guitar,
             guitar_mute=guitar_mute, bass=bass, sopila=sopila, pipe_pad=pipe_pad, tapan=tapan, tapan_rim=tapan_rim,
             def_drum=def_drum, shaker=shaker)
