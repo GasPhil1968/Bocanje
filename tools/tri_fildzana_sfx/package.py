@@ -7,7 +7,7 @@ COOLDOWN = {'voice': 4.0, 'pigeon': 1.5, 'result': 0.0, 'police': 0.0, 'cups': 0
             'powerup': 0.3, 'escape': 0.0, 'tv': 0.0, 'ambience': 2.0}
 SPECIAL_CD = {'saner_wipe_forehead': 6.0, 'saner_nervous': 6.0, 'saner_chuckle': 5.0, 'saner_angry': 5.0,
               'saner_annoyed': 5.0, 'levat_reaction': 8.0, 'audience_murmur': 6.0, 'saner_poke': 1.2,
-              'cup_slide': 0.0, 'cup_set_down': 0.0, 'run_step': 0.0, 'police_step': 0.0}
+              'cup_slide': 0.0, 'pigeon_wings': 0.0, 'cup_set_down': 0.0, 'run_step': 0.0, 'police_step': 0.0}
 
 
 def main(out):
