@@ -1,0 +1,86 @@
+[
+ {
+  "id": "music_studio",
+  "file": "audio/music/music_studio.mp3",
+  "scene": 0,
+  "loop_start_s": 0.25,
+  "loop_end_s": 37.173084,
+  "loop_length_s": 36.923084,
+  "bpm": 104,
+  "loudness_lufs": -20.4,
+  "true_peak_dbtp": -1.5,
+  "size_kb": 587
+ },
+ {
+  "id": "music_kafana",
+  "file": "audio/music/music_kafana.mp3",
+  "scene": 1,
+  "loop_start_s": 0.25,
+  "loop_end_s": 31.554354,
+  "loop_length_s": 31.304354,
+  "bpm": 92,
+  "loudness_lufs": -20.0,
+  "true_peak_dbtp": -4.0,
+  "size_kb": 499
+ },
+ {
+  "id": "music_noc",
+  "file": "audio/music/music_noc.mp3",
+  "scene": 2,
+  "loop_start_s": 0.25,
+  "loop_end_s": 40.25,
+  "loop_length_s": 40.0,
+  "bpm": 72,
+  "loudness_lufs": -20.0,
+  "true_peak_dbtp": -3.41,
+  "size_kb": 635
+ },
+ {
+  "id": "music_ured",
+  "file": "audio/music/music_ured.mp3",
+  "scene": 3,
+  "loop_start_s": 0.25,
+  "loop_end_s": 30.72619,
+  "loop_length_s": 30.47619,
+  "bpm": 126,
+  "loudness_lufs": -20.0,
+  "true_peak_dbtp": -2.48,
+  "size_kb": 486
+ },
+ {
+  "id": "music_autobus",
+  "file": "audio/music/music_autobus.mp3",
+  "scene": 4,
+  "loop_start_s": 0.25,
+  "loop_end_s": 31.05,
+  "loop_length_s": 30.8,
+  "bpm": 300,
+  "loudness_lufs": -20.0,
+  "true_peak_dbtp": -3.35,
+  "size_kb": 491
+ },
+ {
+  "id": "music_montaza",
+  "file": "audio/music/music_montaza.mp3",
+  "scene": 5,
+  "loop_start_s": 0.25,
+  "loop_end_s": 41.989138,
+  "loop_length_s": 41.739138,
+  "bpm": 92,
+  "loudness_lufs": -20.0,
+  "true_peak_dbtp": -2.13,
+  "size_kb": 662
+ },
+ {
+  "id": "music_nocna_smjena",
+  "file": "audio/music/music_nocna_smjena.mp3",
+  "scene": 6,
+  "loop_start_s": 0.25,
+  "loop_end_s": 40.25,
+  "loop_length_s": 40.0,
+  "bpm": 72,
+  "loudness_lufs": -20.0,
+  "true_peak_dbtp": -4.69,
+  "size_kb": 635
+ }
+]

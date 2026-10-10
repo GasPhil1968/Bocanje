@@ -176,7 +176,7 @@ def string_track(dur, events, r, t60=1.4, S=0.42, ap=-0.25, body=SAZ_BODY, body_
     pos(pluck position 0..0.5), mute(T60 after off). Re-plucks inject into the running loop,
     glides retune the loop (left-hand slides)."""
     n = N(dur)
-    ev = sorted(events, key=lambda e: e['t'])
+    ev = sorted([dict(e, t=max(0.0, e['t'])) for e in events], key=lambda e: e['t'])
     f = np.empty(n); T = np.full(n, t60); exc = np.zeros(n)
     cur = ev[0]['f']; f[:] = cur
     for j, e in enumerate(ev):

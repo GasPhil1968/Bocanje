@@ -1,9 +1,11 @@
-"""Patch TRI FILDŽANA index.html: replace the synthesized AU with file-based SFX.
-usage: python3 integrate.py <index.html in> <sfx_manifest.json> <index.html out>"""
+"""Patch TRI FILDŽANA index.html: file-based SFX instead of synthesized AU, background music per
+scene, random level order.
+usage: python3 integrate.py <index.html in> <sfx_manifest.json> <music.json> <index.html out>"""
 import sys, json, re
 
 src = open(sys.argv[1], encoding='utf-8').read()
 man = json.load(open(sys.argv[2], encoding='utf-8'))
+mus = sorted(json.load(open(sys.argv[3], encoding='utf-8')), key=lambda m: m['scene'])
 s = src
 
 
@@ -22,6 +24,9 @@ AU = r"""/* ---------- audio ---------- */
 /* Zvukovi su gotove WAV datoteke (audio/sfx/). Nema sintetiziranih zvukova i nema
    zamjenskog piska: ako datoteka nedostaje ili se još nije učitala, play() šuti. */
 var SFX = {""" + table + r"""};
+/* pozadinska muzika – jedna petlja po scenografiji (indeks = SCENE_OF / BG_NAMES); a..b je petlja u sekundama */
+var MUSIKA = [""" + ','.join("{f:'%s',a:%s,b:%s}" % (m['file'], m['loop_start_s'], m['loop_end_s']) for m in mus) + r"""];
+var MUSIC_GAIN = 0.28;
 var SFX_VOICE = {saner_annoyed:1,saner_angry:1,saner_nervous:1,saner_gasp:1,saner_chuckle:1,saner_poke:1};
 var SFX_RR = {run_step:1,police_step:1};
 var AU = {
@@ -73,6 +78,57 @@ var AU = {
     if(!this.on || !this.ctx) return false;
     if(this.ctx.state === 'suspended'){ try{ this.ctx.resume(); }catch(e){} }
     return true;
+  },
+  /* ---- pozadinska muzika: učitava se po potrebi, u memoriji najviše trenutna i sljedeća ---- */
+  mus: null, musBuf: {}, musLoad: {}, musWant: -1, musNext: -1,
+  musicLoad: function(k){
+    var self = this, m = MUSIKA[k];
+    if(!m || !this.ctx || this.musBuf[k] || this.musLoad[k]) return;
+    this.musLoad[k] = true;   /* neuspjelo učitavanje se ne ponavlja – tada je jednostavno tiho */
+    try{
+      fetch(m.f).then(function(r){ return r.ok ? r.arrayBuffer() : null; }).then(function(ab){
+        if(!ab) return;
+        self.ctx.decodeAudioData(ab, function(b){ self.musBuf[k] = b; delete self.musLoad[k]; self.musicTrim(); }, function(){});
+      }).catch(function(){});
+    }catch(e){}
+  },
+  musicTrim: function(){
+    for(var k in this.musBuf){
+      k = +k;
+      if(k !== this.musWant && k !== this.musNext && !(this.mus && this.mus.k === k)) delete this.musBuf[k];
+    }
+  },
+  musicPre: function(k){ this.musNext = k; this.musicLoad(k); },
+  /* k: indeks u MUSIKA ili -1 za tišinu; lvl: 0..1 (npr. tiše za vrijeme racije) */
+  music: function(k, lvl){
+    if(!this.ctx) return;
+    if(!this.on || PAUSED) k = -1;
+    this.musWant = k;
+    var now = this.ctx.currentTime, m = this.mus;
+    if(m && m.k !== k){
+      try{ m.g.gain.cancelScheduledValues(now); m.g.gain.setValueAtTime(m.g.gain.value, now);
+           m.g.gain.linearRampToValueAtTime(0, now + 1.2); m.s.stop(now + 1.3); }catch(e){}
+      this.mus = m = null;
+    }
+    if(k < 0) return;
+    var target = MUSIC_GAIN * lvl;
+    if(!m){
+      var b = this.musBuf[k];
+      if(!b){ this.musicLoad(k); return; }
+      try{
+        var s = this.ctx.createBufferSource(), g = this.ctx.createGain();
+        s.buffer = b; s.loop = true; s.loopStart = MUSIKA[k].a; s.loopEnd = MUSIKA[k].b;
+        g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(target, now + 1.5);
+        s.connect(g); g.connect(this.master); s.start(now, MUSIKA[k].a);
+        this.mus = {k:k, s:s, g:g, t:target};
+      }catch(e){}
+      return;
+    }
+    if(Math.abs(m.t - target) > 0.001){
+      try{ m.g.gain.cancelScheduledValues(now); m.g.gain.setValueAtTime(m.g.gain.value, now);
+           m.g.gain.linearRampToValueAtTime(target, now + 0.8); }catch(e){}
+      m.t = target;
+    }
   },
   /* o: {v: varijanta, delay: s, gain: x, pan: -1..1, dur: s (prekini s kratkim fade-om)} */
   play: function(id, o){
@@ -266,12 +322,55 @@ s = s.replace('AU.chip()', "AU.play('ui_confirm')")
 rep("  switch(G.st){\n    case S.INTRO: {", """  var wipeNow = sanerEmotion()==='sweat' && [S.BET,S.PICK].includes(G.st) && (G.st!==S.PICK||G.t>.7) && G.gt%8>6.4;
   if(wipeNow && !G.wipeSnd) AU.play('saner_wipe_forehead');
   G.wipeSnd = wipeNow;
+  /* pozadinska muzika: petlja scenografije dok traje runda; tiše za racije; tišina za uvod,
+     bijeg, međuigre i završne ekrane (tamo sviraju vlastiti efekti) */
+  var muzK = -1, muzL = 1;
+  if(G.levatLeavePhase !== 4 && ![S.INTRO,S.BJEG,S.POBJEDA,S.OVER,S.UHAPSEN,S.ODVELI].includes(G.st)){
+    muzK = scena();
+    if(G.st === S.RACIJA || G.st === S.MITO) muzL = 0.3;
+  }
+  AU.music(muzK, muzL);
+  AU.musicPre(SCENE_OF[G.level % SCENE_OF.length]);   /* sljedeće mjesto se učita unaprijed */
 
   switch(G.st){
     case S.INTRO: {""")
+# random level order: persistent bag, never the same place or the same set twice in a row
+start = s.index("function novoMjesto(){")
+end = s.index("function odaberiMedjuigru(){")
+s = s[:start] + """function novoMjesto(){
+  G.mjestoUzeto = true;
+  var cur = G.level, curSc = SCENE_OF[cur], i, j;
+  if(!G.levelBag || !G.levelBag.length){
+    var b = [];
+    for(i=0;i<MJESTA.length;i++) if(i !== cur) b.push(i);
+    for(i=b.length-1;i>0;i--){ j = ri(0,i); var tmp = b[i]; b[i] = b[j]; b[j] = tmp; }
+    G.levelBag = b;
+  }
+  /* svako mjesto jednom prije ponavljanja; nikad isto mjesto ni ista scenografija dva puta zaredom */
+  var k = -1;
+  for(j=0;j<G.levelBag.length;j++){ if(G.levelBag[j] !== cur && SCENE_OF[G.levelBag[j]] !== curSc){ k = j; break; } }
+  if(k < 0) for(j=0;j<G.levelBag.length;j++){ if(G.levelBag[j] !== cur){ k = j; break; } }
+  if(k < 0) k = 0;
+  G.level = G.levelBag.splice(k, 1)[0];
+  save();
+}
+
+""" + s[end:]
+rep("      lvl: clamp(o.lvl|0, 0, 16),", "      lvl: clamp(o.lvl|0, 0, 16),\n      bag: Array.isArray(o.bag) ? o.bag.filter(function(v){ return v === (v|0) && v >= 0 && v <= 16; }) : [],")
+rep("      lvl: G.level|0, ml: G.medjuLast,", "      lvl: G.level|0, bag: G.levelBag || [], ml: G.medjuLast,")
+rep("""  /* svako pokretanje igre počinje na drugom mjestu */
+  G.level = ri(0, MJESTA.length-1);
+  G.levelBag = [];
+  G.sceneLevel = G.level;""", """  /* svako pokretanje: nasumično mjesto iz sačuvane vreće – nikad mjesto (ni scenografija) prošlog puta */
+  G.level = st ? st.lvl : -1;
+  G.levelBag = (st && st.bag) ? st.bag.filter(function(v){ return v !== G.level; }) : [];
+  novoMjesto();
+  G.mjestoUzeto = false;
+  G.sceneLevel = G.level;""")
+
 # test hook
 rep("if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot);", "AU.prefetch();\nif(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot);")
-rep("  epizoda:epizoda, scena:scena, toRacija:toRacija, setCups:setCups\n};", "  epizoda:epizoda, scena:scena, toRacija:toRacija, setCups:setCups, AU:AU, SFX:SFX\n};")
+rep("  epizoda:epizoda, scena:scena, toRacija:toRacija, setCups:setCups\n};", "  epizoda:epizoda, scena:scena, toRacija:toRacija, setCups:setCups, AU:AU, SFX:SFX, MUSIKA:MUSIKA, SCENE_OF:SCENE_OF\n};")
 
 # ---------------------------------------------------------------- nothing synthetic may remain
 for bad in ['AU.tone', 'AU.noise', 'AU.pluck', 'AU.thunk', 'AU.whoosh', 'AU.tap', 'AU.chip', 'AU.glint', 'AU.coin',
@@ -281,5 +380,5 @@ for bad in ['AU.tone', 'AU.noise', 'AU.pluck', 'AU.thunk', 'AU.whoosh', 'AU.tap'
 ids = set(re.findall(r"AU\.play\('(\w+)'", s)) | set(re.findall(r"'(\w+)'", new_med))
 missing = {i for i in ids if i in {e['id'] for e in man['sounds']}} ^ {e['id'] for e in man['sounds']}
 print('unused ids:', missing)
-open(sys.argv[3], 'w', encoding='utf-8').write(s)
+open(sys.argv[4], 'w', encoding='utf-8').write(s)
 print('ok', len(src), '->', len(s))

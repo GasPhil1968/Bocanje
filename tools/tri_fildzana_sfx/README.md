@@ -10,12 +10,16 @@ Every sound is **procedurally synthesized**, not recorded:
 | `models.py` | physical models (modal ceramic cups, wood, coins, bells, membrane drum + jingles, friction, fabric, paper); Karplus–Strong strings with re-pluck and glides; glottal-pulse/formant voice model (`SANER`, `LEVAT`, `MINKA`) |
 | `sounds.py` | one design function per sound id |
 | `build.py` | catalogue (id, variants, duration range, loudness target, gain, event) → renders `audio/sfx/*.wav` |
+| `music.py` | 7 background-music loops (one per scene background), rendered exactly periodic and encoded as MP3 → `audio/music/`, `music.json` |
+| `integrate.py` | patches the game's `index.html`: file-based `AU` (no synthesis), music player, random level order |
 | `package.py` | decodes every file (soundfile + ffprobe), checks the format, audibility, −1 dBFS ceiling, duration range, lead silence, clean edges and duplicates, and writes `sfx_manifest.json` |
 
 Requirements: Python 3.11+, `numpy scipy soundfile`, and ffmpeg/ffprobe.
 
 ```
 python3 build.py OUT && python3 package.py OUT
+python3 music.py MUS
+python3 integrate.py GAME/index.html OUT/sfx_manifest.json MUS/music.json GAME_OUT/index.html
 cp SFX_MAPPING.md OUT/   # the mapping doc lives in the zip; edit it there
 ```
 
