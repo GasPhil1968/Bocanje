@@ -81,12 +81,29 @@ rep("""  if('serviceWorker' in navigator && location.protocol === 'https:')
   }""")
 open(p, 'w', encoding='utf-8').write(s)
 
+# ------------------------------------------------------------------ Netlify cache headers (as in Soko v100)
+open(os.path.join(out, '_headers'), 'w').write("""# Netlify: page, service worker and manifest are always revalidated, so a new release
+# is visible immediately. Offline use is handled by sw.js.
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+/sw.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+""")
+
 # ------------------------------------------------------------------ sw.js
 files = []
 for dp, dn, fn in os.walk(out):
     dn.sort()
     for f in sorted(fn):
-        if f.startswith('.') or f == 'sw.js': continue
+        if f.startswith('.') or f in ('sw.js', '_headers') or f.startswith('__'): continue
         files.append(os.path.relpath(os.path.join(dp, f), out).replace(os.sep, '/'))
 h = hashlib.sha256()
 for f in files:
